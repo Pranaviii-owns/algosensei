@@ -1,0 +1,14 @@
+### Health Check
+GET http://localhost:5000/
+
+### Create a Problem
+POST http://localhost:5000/api/problems
+Content-Type: application/json
+
+{
+  "title": "Find Maximum",
+  "description": "Given an array of integers, return the maximum value in the array."
+}
+
+### Get All Problems
+GET http://localhost:5000/api/problems
