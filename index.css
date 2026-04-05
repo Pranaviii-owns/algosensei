@@ -1,0 +1,211 @@
+.app-root {
+  min-height: 100vh;
+}
+
+/* dark (current style) */
+.app-root.dark-mode {
+  background: radial-gradient(circle at top left, #1f2937 0, #020617 45%, #000 100%);
+  color: #e5e7eb;
+}
+
+/* light mode */
+.app-root.light-mode {
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Top navigation */
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Gradient logo text, italic */
+.logo-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, #38bdf8, #a855f7, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+  font-style: italic;
+}
+
+/* Nav buttons */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(120deg, #38bdf8, #a855f7);
+  border-color: transparent;
+}
+
+/* Main content zone */
+.main-area {
+  padding: 32px 40px 40px;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  margin-top: 0;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+/* Center width */
+.center-section {
+  margin-top: 24px;
+  max-width: 960px;
+}
+
+/* Prompt card */
+.prompt-form {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prompt-input,
+.code-input {
+  background: #020617;
+  border-radius: 14px;
+  border: 1px solid rgba(75, 85, 99, 0.9);
+  padding: 10px 12px;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.code-input {
+  font-size: 0.9rem;
+  font-family: "Fira Code", monospace;
+  border-style: dashed;
+}
+
+.prompt-input:focus,
+.code-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+}
+
+/* Button */
+.primary-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(120deg, #38bdf8, #a855f7);
+  color: #f9fafb;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.big-btn {
+  align-self: flex-end;
+}
+
+/* History list */
+.history-card {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(55, 65, 81, 0.8);
+}
+
+.empty-text {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.history-item {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(55, 65, 81, 0.7);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-problem {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+}
+
+.history-code {
+  margin: 0 0 6px;
+  padding: 8px 10px;
+  background: #020617;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+
+.history-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Toggle button in header */
+.toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  color: #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: linear-gradient(120deg, #38bdf8, #a855f7);
+  border-color: transparent;
+}
+
+/* Light mode: nav buttons look dark */
+.app-root.light-mode .nav-btn,
+.app-root.light-mode .toggle-btn {
+  color: #111827;
+  border-color: rgba(148, 163, 184, 0.7);
+}
+
+.app-root.light-mode .nav-btn:hover,
+.app-root.light-mode .toggle-btn:hover {
+  color: #f9fafb; /* text becomes white on gradient hover */
+}
